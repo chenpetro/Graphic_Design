@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,6 +53,25 @@ table {
   border-spacing: 0;
 }
 
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.graphic-design__text-bottom, .graphic-design__text-top {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26.5px;
+  letter-spacing: 0.05em;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .header {
   display: flex;
 }
@@ -60,17 +80,113 @@ table {
   height: 56px;
   border-radius: 27px;
   background-color: #d80808;
+  margin: 25px 235px 0 82px;
 }
 .header__nav {
-  display: flex;
+  color: #ffffff;
+  width: 522px;
+  margin-top: 43px;
+  font-size: 18px;
 }
 .header__nav__item__title {
+  margin: auto;
+}
+.header__right-button {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 900;
+  margin: 26px 60px 0 206px;
+  width: 172px;
+  height: 56px;
+  border-radius: 27px;
+  background-color: #d80808;
+}
+.header__right-button__text {
   color: #ffffff;
 }
 
 .graphic-design {
   width: 1437px;
   height: 1090px;
-  background: url("/images/grey_background.png") no-repeat center/cover;
+  background: url("/img/grey_background.png") no-repeat center/cover;
   margin: 0 auto;
+  position: relative;
+}
+.graphic-design__girl {
+  position: absolute;
+  top: 85px;
+  left: 379px;
+  z-index: 4;
+}
+.graphic-design__graphic-red {
+  position: absolute;
+  top: 279px;
+  left: 92px;
+  z-index: 2;
+}
+.graphic-design__graphic-dark {
+  position: absolute;
+  top: 279px;
+  left: 87px;
+  z-index: 3;
+}
+.graphic-design__graphic-white {
+  position: absolute;
+  top: 279px;
+  left: 80px;
+  z-index: 4;
+}
+.graphic-design__design-red {
+  position: absolute;
+  top: 775px;
+  left: 876px;
+  z-index: 6;
+}
+.graphic-design__design-dark {
+  position: absolute;
+  top: 775px;
+  left: 870px;
+  z-index: 7;
+}
+.graphic-design__design-white {
+  position: absolute;
+  top: 775px;
+  left: 862px;
+  z-index: 8;
+}
+.graphic-design__elipse-big {
+  position: absolute;
+  top: 210px;
+  left: 368px;
+  z-index: 1;
+}
+.graphic-design__elipse-red {
+  position: absolute;
+  top: 149px;
+  left: 307px;
+  z-index: 1;
+}
+.graphic-design__elipse-small-brown {
+  position: absolute;
+  top: 279px;
+  left: 1010px;
+  z-index: 2;
+}
+.graphic-design__elipse-small-red {
+  position: absolute;
+  top: 775px;
+  left: 331px;
+  z-index: 2;
+}
+.graphic-design__text-top {
+  top: 300px;
+  left: 1110px;
+  width: 191px;
+  color: #BB9292;
+}
+.graphic-design__text-bottom {
+  top: 882px;
+  left: 115px;
+  width: 303px;
+  color: #d80808;
 }
