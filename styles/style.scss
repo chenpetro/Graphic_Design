@@ -1,13 +1,72 @@
 @import "../styles/reset";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&family=Syncopate:wght@400;700&display=swap");
+@font-face {
+  font-family: "Awesome-Font";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Awesome-Font"), local("Awesome-Font-Regular"),
+    url(/fonts/Trebuchet-MS-Italic.ttf) format("woff");
+}
+
+// p {
+// font-family: 'Awesome-Font', Arial;
+// }
 
 $red-color: #d80808;
 $white-color: #ffffff;
-$text-brown: #BB9292;
+$text-brown: #bb9292;
+$pink-color: #f4bdbd;
+$shadow: #00000087;
+$dark: #1e0202;
+$border-color: #90070761;
+$light-grey: #eeeeee;
+$light-shadow: #00000040;
+$shadow-two: #5e0e0e75;
+$shadow-red: #ff0606;
+$number-two: #f0c9c9;
+$border-color-two: #ac898957;
+$number-three: #fb0909;
+$border-color-three: #51030370;
+$black-color: #000000;
+$white-text: #fff9f9;
+$projects-title: #e4cfcf;
+$projects-shadow: #e20d0d8a;
 
 %flex {
   display: flex;
   justify-content: space-between;
+}
+
+%graphic_design {
+  font-family: "Syncopate";
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  position: absolute;
+  text-shadow: 0px 4px 4px 0px $light-shadow;
+}
+
+%graphic {
+  width: 677.77px;
+  height: 87.19px;
+  rotate: 0.15deg;
+  font-size: 96px;
+  line-height: 96px;
+  top: 279px;
+}
+
+%design {
+  width: 507px;
+  height: 92px;
+  font-size: 95px;
+  font-weight: 700;
+  line-height: 92px;
+  top: 775px;
+}
+
+@mixin graphic_design($color, $index, $left) {
+  color: $color;
+  z-index: $index;
+  left: $left;
 }
 
 %text {
@@ -16,6 +75,42 @@ $text-brown: #BB9292;
   font-weight: 700;
   line-height: 26.5px;
   letter-spacing: 0.05em;
+}
+
+%mytask {
+  position: absolute;
+  height: 58.39px;
+  font-family: "Syncopate";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 59.34px;
+}
+
+%mytasktext {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  position: absolute;
+}
+
+%one {
+  position: absolute;
+  height: 241.48px;
+  font-size: 210px;
+  font-weight: 700;
+  line-height: 243.84px;
+  z-index: 2;
+}
+
+%projects {
+  position: absolute;
+  width: 392.81px;
+  height: 58.28px;
+  top: 39px;
+  font-family: "Syncopate";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 59.34px;
 }
 
 @mixin button($width, $height, $radius, $bg) {
@@ -84,24 +179,39 @@ body {
   &__girl {
     @include img(absolute, 85px, 379px, 4);
   }
-  &__graphic-red {
-    @include img(absolute, 279px, 92px, 2);
+
+  &__title-one {
+    @extend %graphic;
+    @extend %graphic_design;
+    @include graphic_design($light-grey, 10, 67px);
   }
-  &__graphic-dark {
-    @include img(absolute, 279px, 87px, 3);
+  &__title-one-red {
+    @extend %graphic;
+    @extend %graphic_design;
+    @include graphic_design($shadow-two, 9, 74px);
   }
-  &__graphic-white {
-    @include img(absolute, 279px, 80px, 4);
+  &__title-one-dark {
+    @extend %graphic;
+    @extend %graphic_design;
+    @include graphic_design($shadow-red, 8, 79px);
   }
-  &__design-red {
-    @include img(absolute, 775px, 876px, 6);
+
+  &__title-two {
+    @extend %design;
+    @extend %graphic_design;
+    @include graphic_design($light-grey, 10, 862px);
   }
-  &__design-dark {
-    @include img(absolute, 775px, 870px, 7);
+  &__title-two-red {
+    @extend %design;
+    @extend %graphic_design;
+    @include graphic_design($shadow-two, 9, 869px);
   }
-  &__design-white {
-    @include img(absolute, 775px, 862px, 8);
+  &__title-two-dark {
+    @extend %design;
+    @extend %graphic_design;
+    @include graphic_design($shadow-red, 8, 874px);
   }
+
   &__elipse-big {
     @include img(absolute, 210px, 368px, 1);
   }
@@ -121,5 +231,181 @@ body {
   &__text-bottom {
     @extend %text;
     @include text_size(882px, 115px, 303px, $red-color);
+  }
+}
+
+.my-task {
+  width: 1437px;
+  height: 945.13px;
+  margin: 0 auto;
+  position: relative;
+  background: url("../img/background_red.png");
+  &__title {
+    @extend %mytask;
+    @include text_size(26px, 76px, 353px, $pink-color);
+    z-index: 2;
+  }
+  &__shadow {
+    @extend %mytask;
+    @include text_size(26px, 87px, 421px, $shadow);
+  }
+  &__heart {
+    @include img(absolute, 42px, 618px, 1);
+  }
+  &__cloud {
+    @include img(absolute, 284px, 831px, 1);
+  }
+  &__laptop {
+    @include img(absolute, 528px, 1006px, 1);
+  }
+  &__img-one {
+    @include img(absolute, 86px, 128px, 0);
+  }
+  &__img-two {
+    @include img(absolute, 301px, 246px, 0);
+  }
+  &__img-three {
+    @include img(absolute, 472px, 382px, 0);
+  }
+  &__one {
+    @extend %one;
+    @include text_size(187px, 135px, 124px, $dark);
+    -webkit-text-stroke: 2px $border-color;
+    font-family: "Trebuchet MS";
+  }
+  &__two {
+    @extend %one;
+    @include text_size(488px, 276px, 122px, $number-two);
+    -webkit-text-stroke: 3px $border-color-two;
+    font-family: "Sen";
+    height: 265.23px;
+    font-size: 200px;
+    line-height: 240.63px;
+  }
+  &__three {
+    @extend %one;
+    @include text_size(693px, 421px, 122px, $number-three);
+    -webkit-text-stroke: 3px $border-color-three;
+    font-family: "Sen";
+  }
+  &__header-one {
+    height: 45.52px;
+    @extend %mytasktext;
+    @include text_size(225px, 261px, 233px, $black-color);
+  }
+  &__header-two {
+    height: 49.48px;
+    @extend %mytasktext;
+    @include text_size(390px, 378px, 304px, $white-text);
+  }
+  &__header-three {
+    height: 20.78px;
+    @extend %mytasktext;
+    @include text_size(795px, 603px, 277px, $black-color);
+  }
+  &__text-two {
+    height: 83.13px;
+    line-height: 18.75px;
+    position: absolute;
+    @include text_size(444px, 378px, 200px, $white-text);
+  }
+  &__text-three {
+    height: 116.78px;
+    line-height: 18.75px;
+    position: absolute;
+    text-align: end;
+    @include text_size(650px, 641px, 239px, $black-color);
+  }
+}
+
+.projects {
+  position: relative;
+  width: 1437px;
+  height: 1191px;
+  background: url("../img/black_backgroung.png");
+  margin: 0 auto;
+  z-index: -2;
+  &__title {
+    @extend %projects;
+    left: 78px;
+    color: $projects-title;
+    z-index: 1;
+  }
+  &__title-shadow {
+    @extend %projects;
+    left: 82px;
+    color: $projects-shadow;
+  }
+  &__list {
+    width: 1144px;
+    margin: 0 auto;
+    padding-top: 180px;
+    padding-bottom: 55px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 84px;
+    &__item {
+      height: 545px;
+      &__title {
+        width: 127.26px;
+        height: 20.75px;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 21.09px;
+        color: $white-color;
+        margin-top: 10px;
+        margin-bottom: 3px;
+      }
+      &__text {
+        width: 62.13px;
+        height: 18.77px;
+        line-height: 18.75px;
+        color: $white-color;
+      }
+      &__text::after {
+        content: url("../img/arrow_text.png");
+        display: inline-block;
+        width: 9px;
+        height: 15px;
+        z-index: 10;
+        position: absolute;
+        margin-left: 10px;
+      }
+
+      &__box {
+        position: relative;
+        width: 446px;
+        height: 287px;
+        border-radius: 11px;
+        border: 2px solid #1d1c1c54;
+        background: linear-gradient(180deg, #e30707 0%, #6a1212 73.1%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__img {
+          width: 372.77px;
+          height: 231.16px;
+          border-radius: 17px;
+        }
+      }
+      &__box::before {
+        content: url("../img/arrow_text.png");
+        display: inline-block;
+        width: 9px;
+        height: 15px;
+        content: "";
+        position: absolute;
+        width: 462.96px;
+        height: 305.25px;
+        top: -8.89px;
+        left: -8px;
+        border-radius: 11px;
+        background: #282727ba;
+        box-shadow: 0px 0px 69px 37px #615d5d47;
+        z-index: -1;
+      }
+    }
   }
 }
