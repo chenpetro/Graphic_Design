@@ -134,6 +134,17 @@ table {
   line-height: 59.34px;
 }
 
+.reviews__title-shadow, .reviews__title {
+  position: absolute;
+  width: 359.5px;
+  height: 57.4px;
+  top: 26.26px;
+  font-family: "Syncopate";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 59.34px;
+}
+
 body {
   font-family: "Roboto";
   font-size: 16px;
@@ -379,6 +390,8 @@ body {
 
 .projects {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 1437px;
   height: 1191px;
   background: url("../img/black_backgroung.png");
@@ -405,7 +418,7 @@ body {
   row-gap: 84px;
 }
 .projects__list__item {
-  height: 545px;
+  height: 340px;
 }
 .projects__list__item__title {
   width: 127.26px;
@@ -463,4 +476,28 @@ body {
   background: rgba(40, 39, 39, 0.7294117647);
   box-shadow: 0px 0px 69px 37px rgba(97, 93, 93, 0.2784313725);
   z-index: -1;
+}
+.projects__button {
+  width: 184.38px;
+  height: 63.22px;
+  border-radius: 27px;
+  background-color: #d80808;
+  color: #ffffff;
+  align-self: center;
+}
+
+.reviews {
+  position: relative;
+  width: 1437px;
+  height: 1756px;
+  background: url("../img/reviews_background.png");
+}
+.reviews__title {
+  color: #f4bdbd;
+  left: 72px;
+  z-index: 1;
+}
+.reviews__title-shadow {
+  color: rgba(255, 0, 0, 0.4196078431);
+  left: 76px;
 }

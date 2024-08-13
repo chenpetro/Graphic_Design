@@ -31,6 +31,8 @@ $black-color: #000000;
 $white-text: #fff9f9;
 $projects-title: #e4cfcf;
 $projects-shadow: #e20d0d8a;
+$reviews-shadow: #FF00006B;
+
 
 %flex {
   display: flex;
@@ -107,6 +109,17 @@ $projects-shadow: #e20d0d8a;
   width: 392.81px;
   height: 58.28px;
   top: 39px;
+  font-family: "Syncopate";
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 59.34px;
+}
+
+%reviews {
+  position: absolute;
+  width: 359.5px;
+  height: 57.4px;
+  top: 26.26px;
   font-family: "Syncopate";
   font-size: 57px;
   font-weight: 700;
@@ -320,6 +333,8 @@ body {
 
 .projects {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 1437px;
   height: 1191px;
   background: url("../img/black_backgroung.png");
@@ -347,7 +362,7 @@ body {
     justify-content: space-between;
     row-gap: 84px;
     &__item {
-      height: 545px;
+      height: 340px;
       &__title {
         width: 127.26px;
         height: 20.75px;
@@ -408,4 +423,30 @@ body {
       }
     }
   }
+  &__button{
+    width: 184.38px;
+height: 63.22px;
+border-radius: 27px;
+background-color: $red-color;
+color: $white-color;
+align-self: center;
+  }
+}
+
+.reviews{
+  position: relative;
+width: 1437px;
+height: 1756px;
+background: url("../img/reviews_background.png");
+&__title{
+ color: $pink-color;
+ @extend %reviews;
+ left: 72px;
+ z-index: 1;
+}
+&__title-shadow{
+  color: $reviews-shadow;
+  @extend %reviews;
+  left: 76px;
+ }
 }
