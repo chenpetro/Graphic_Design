@@ -126,6 +126,11 @@ $reviews-shadow: #FF00006B;
   line-height: 59.34px;
 }
 
+%position {
+  position: relative;
+  margin: 0 auto;
+}
+
 @mixin button($width, $height, $radius, $bg) {
   width: $width;
   height: $height;
@@ -146,6 +151,7 @@ $reviews-shadow: #FF00006B;
   width: $width;
   color: $color;
 }
+
 
 body {
   font-family: "Roboto";
@@ -187,8 +193,7 @@ body {
   width: 1437px;
   height: 1090px;
   background: url("/img/grey_background.png") no-repeat center/cover;
-  margin: 0 auto;
-  position: relative;
+  @extend %position;
   &__girl {
     @include img(absolute, 85px, 379px, 4);
   }
@@ -250,8 +255,7 @@ body {
 .my-task {
   width: 1437px;
   height: 945.13px;
-  margin: 0 auto;
-  position: relative;
+  @extend %position;
   background: url("../img/background_red.png");
   &__title {
     @extend %mytask;
@@ -332,13 +336,12 @@ body {
 }
 
 .projects {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 1437px;
   height: 1191px;
   background: url("../img/black_backgroung.png");
-  margin: 0 auto;
+  @extend %position;
   z-index: -2;
   &__title {
     @extend %projects;
@@ -434,7 +437,7 @@ align-self: center;
 }
 
 .reviews{
-  position: relative;
+@extend %position;
 width: 1437px;
 height: 1756px;
 background: url("../img/reviews_background.png");
@@ -449,4 +452,20 @@ background: url("../img/reviews_background.png");
   @extend %reviews;
   left: 76px;
  }
+ &__anna-img{
+  @include img(absolute, 63px, 179px, 3);
+ }
+ &__daria-img{
+  @include img(absolute, 57px, 982px, 3);
+ }
+ &__mark-img{
+  @include img(absolute, 335px, 556px, 3);
+ }
+ &__circle{
+  @include img(absolute, 112px, 156px, 3);
+  @include button(310px, 302px, 50%, #39030338);
+
+ }
 }
+
+

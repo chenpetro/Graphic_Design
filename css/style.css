@@ -145,6 +145,11 @@ table {
   line-height: 59.34px;
 }
 
+.reviews, .projects, .my-task, .graphic-design {
+  position: relative;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Roboto";
   font-size: 16px;
@@ -188,8 +193,6 @@ body {
   width: 1437px;
   height: 1090px;
   background: url("/img/grey_background.png") no-repeat center/cover;
-  margin: 0 auto;
-  position: relative;
 }
 .graphic-design__girl {
   position: absolute;
@@ -267,8 +270,6 @@ body {
 .my-task {
   width: 1437px;
   height: 945.13px;
-  margin: 0 auto;
-  position: relative;
   background: url("../img/background_red.png");
 }
 .my-task__title {
@@ -389,13 +390,11 @@ body {
 }
 
 .projects {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 1437px;
   height: 1191px;
   background: url("../img/black_backgroung.png");
-  margin: 0 auto;
   z-index: -2;
 }
 .projects__title {
@@ -487,7 +486,6 @@ body {
 }
 
 .reviews {
-  position: relative;
   width: 1437px;
   height: 1756px;
   background: url("../img/reviews_background.png");
@@ -500,4 +498,32 @@ body {
 .reviews__title-shadow {
   color: rgba(255, 0, 0, 0.4196078431);
   left: 76px;
+}
+.reviews__anna-img {
+  position: absolute;
+  top: 63px;
+  left: 179px;
+  z-index: 3;
+}
+.reviews__daria-img {
+  position: absolute;
+  top: 57px;
+  left: 982px;
+  z-index: 3;
+}
+.reviews__mark-img {
+  position: absolute;
+  top: 335px;
+  left: 556px;
+  z-index: 3;
+}
+.reviews__circle {
+  position: absolute;
+  top: 112px;
+  left: 156px;
+  z-index: 3;
+  width: 310px;
+  height: 302px;
+  border-radius: 50%;
+  background-color: rgba(57, 3, 3, 0.2196078431);
 }
