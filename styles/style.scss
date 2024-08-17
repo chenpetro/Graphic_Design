@@ -46,7 +46,10 @@ $elipse-mark: #510607cf;
 $shadow-mark: #b61818eb;
 $lets-work: #f3d5d5;
 $lets-work-text: #e8d6d6;
-$contact-me: #FF0000;
+$contact-me: #ff0000;
+$footer-line: #ff2929;
+$footer-text: #d8d3d3;
+$footer-border: grey;
 
 %flex {
   display: flex;
@@ -677,8 +680,9 @@ body {
           margin-top: 69px;
           color: $lets-work;
           // -webkit-text-stroke: 2px ;
-          text-shadow: 2px 0 #49070754, -2px 0 #49070754, 0 2px #49070754, 0 -2px #49070754,
-               2px 2px #49070754, -2px -2px #49070754, 2px -2px #49070754, -2px 2px #49070754;
+          text-shadow: 2px 0 #49070754, -2px 0 #49070754, 0 2px #49070754,
+            0 -2px #49070754, 2px 2px #49070754, -2px -2px #49070754,
+            2px -2px #49070754, -2px 2px #49070754;
         }
         &__line {
           @include size(559px, 4px);
@@ -694,22 +698,111 @@ body {
           color: $lets-work-text;
           margin-top: 10px;
         }
+        &__icons {
+          position: relative;
+          &__instagram {
+            position: absolute;
+            top: 50px;
+            left: -50px;
+          }
+          &__behance {
+            position: absolute;
+            top: 10px;
+            left: -20px;
+          }
+          &__whatsapp {
+            position: absolute;
+            top: 50px;
+            left: 55px;
+          }
+        }
       }
-      &__button{
+      &__button {
         @include size(196px, 64px);
-        
         border-radius: 27px;
         border: none;
-background-color: $white-color;
-font-size: 19px;
-font-weight: 900;
-line-height: 22.27px;
-color: $contact-me;
-margin-top: 142px;
-margin-left: 102px;
-
-
+        background-color: $white-color;
+        font-size: 19px;
+        font-weight: 900;
+        line-height: 22.27px;
+        color: $contact-me;
+        margin-top: 142px;
+        margin-left: 102px;
       }
     }
+  }
+}
+.footer {
+  @include size(1437px, 180px);
+  background-color: $black-color;
+  margin: 0 auto;
+  display: flex;
+  border-top: 6px solid $footer-border;
+  &__name {
+    margin: 84px 258px 0px 82px;
+    @include size(182px, 14px);
+    font-family: "Syncopate";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15.62px;
+    letter-spacing: 0.06em;
+    color: $contact-me;
+  }
+  &__line {
+    margin-right: 17px;
+    margin-top: 34px;
+    @include size(2px, 112px);
+    background-color: $footer-line;
+  }
+  &__services {
+    display: flex;
+    flex-direction: column;
+    margin-right: 71px;
+    &__name {
+      margin: 53px 0px 17px 0px;
+      @include size(195px, 14px);
+      font-family: "Syncopate";
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 15.62px;
+      letter-spacing: 0.06em;
+      color: $contact-me;
+    }
+    &__main-page {
+      margin-bottom: 10px;
+      @include size(85px, 16px);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 17.58px;
+      letter-spacing: 0.06em;
+      color: $footer-text;
+    }
+    &__terms {
+      @include size(131px, 16px);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 17.58px;
+      letter-spacing: 0.06em;
+      color: $footer-text;
+    }
+  }
+  &__email{
+    margin-right: 171px;
+    margin-top: 110px;
+    @include size(251px, 16px);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.58px;
+    letter-spacing: 0.06em;
+    color: $footer-text;
+  }
+  &__tel{
+    @include size(149px, 16px);
+    margin-top: 110px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.58px;
+    letter-spacing: 0.06em;
+    color: $footer-text;
   }
 }

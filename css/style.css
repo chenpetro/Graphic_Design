@@ -794,6 +794,24 @@ body {
   color: #e8d6d6;
   margin-top: 10px;
 }
+.reviews__lets-work__red__left__icons {
+  position: relative;
+}
+.reviews__lets-work__red__left__icons__instagram {
+  position: absolute;
+  top: 50px;
+  left: -50px;
+}
+.reviews__lets-work__red__left__icons__behance {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+}
+.reviews__lets-work__red__left__icons__whatsapp {
+  position: absolute;
+  top: 50px;
+  left: 55px;
+}
 .reviews__lets-work__red__button {
   width: 196px;
   height: 64px;
@@ -803,7 +821,90 @@ body {
   font-size: 19px;
   font-weight: 900;
   line-height: 22.27px;
-  color: #FF0000;
+  color: #ff0000;
   margin-top: 142px;
   margin-left: 102px;
+}
+
+.footer {
+  width: 1437px;
+  height: 180px;
+  background-color: #000000;
+  margin: 0 auto;
+  display: flex;
+  border-top: 6px solid grey;
+}
+.footer__name {
+  margin: 84px 258px 0px 82px;
+  width: 182px;
+  height: 14px;
+  font-family: "Syncopate";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15.62px;
+  letter-spacing: 0.06em;
+  color: #ff0000;
+}
+.footer__line {
+  margin-right: 17px;
+  margin-top: 34px;
+  width: 2px;
+  height: 112px;
+  background-color: #ff2929;
+}
+.footer__services {
+  display: flex;
+  flex-direction: column;
+  margin-right: 71px;
+}
+.footer__services__name {
+  margin: 53px 0px 17px 0px;
+  width: 195px;
+  height: 14px;
+  font-family: "Syncopate";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15.62px;
+  letter-spacing: 0.06em;
+  color: #ff0000;
+}
+.footer__services__main-page {
+  margin-bottom: 10px;
+  width: 85px;
+  height: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17.58px;
+  letter-spacing: 0.06em;
+  color: #d8d3d3;
+}
+.footer__services__terms {
+  width: 131px;
+  height: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17.58px;
+  letter-spacing: 0.06em;
+  color: #d8d3d3;
+}
+.footer__email {
+  margin-right: 171px;
+  margin-top: 110px;
+  width: 251px;
+  height: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17.58px;
+  letter-spacing: 0.06em;
+  color: #d8d3d3;
+}
+.footer__tel {
+  width: 149px;
+  height: 16px;
+  margin-top: 110px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17.58px;
+  letter-spacing: 0.06em;
+  color: #d8d3d3;
 }
