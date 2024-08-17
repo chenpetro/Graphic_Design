@@ -46,6 +46,7 @@ $elipse-mark: #510607cf;
 $shadow-mark: #b61818eb;
 $lets-work: #f3d5d5;
 $lets-work-text: #e8d6d6;
+$contact-me: #FF0000;
 
 %flex {
   display: flex;
@@ -675,6 +676,9 @@ body {
           line-height: 41.64px;
           margin-top: 69px;
           color: $lets-work;
+          // -webkit-text-stroke: 2px ;
+          text-shadow: 2px 0 #49070754, -2px 0 #49070754, 0 2px #49070754, 0 -2px #49070754,
+               2px 2px #49070754, -2px -2px #49070754, 2px -2px #49070754, -2px 2px #49070754;
         }
         &__line {
           @include size(559px, 4px);
@@ -690,6 +694,21 @@ body {
           color: $lets-work-text;
           margin-top: 10px;
         }
+      }
+      &__button{
+        @include size(196px, 64px);
+        
+        border-radius: 27px;
+        border: none;
+background-color: $white-color;
+font-size: 19px;
+font-weight: 900;
+line-height: 22.27px;
+color: $contact-me;
+margin-top: 142px;
+margin-left: 102px;
+
+
       }
     }
   }
