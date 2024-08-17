@@ -4,6 +4,7 @@
   font-family: "Awesome-Font";
   font-style: normal;
   font-weight: 400;
+
   src: local("Awesome-Font"), local("Awesome-Font-Regular"),
     url(/fonts/Trebuchet-MS-Italic.ttf) format("woff");
 }
@@ -31,10 +32,20 @@ $black-color: #000000;
 $white-text: #fff9f9;
 $projects-title: #e4cfcf;
 $projects-shadow: #e20d0d8a;
-$reviews-shadow: #FF00006B;
+$reviews-shadow: #ff00006b;
 $reviews-circle: #39030338;
 $circle-shadow: #00000047;
-
+$name-border: #ff6060ab;
+$elipse-anna: #ea1b1b;
+$elipse-anna-back: #aa4040b5;
+$elipse-daria: #4b2f2f99;
+$review-daria: #fdaeae;
+$shadow-daria: #875c5c;
+$review-mark: #6b0505;
+$elipse-mark: #510607cf;
+$shadow-mark: #b61818eb;
+$lets-work: #f3d5d5;
+$lets-work-text: #e8d6d6;
 
 %flex {
   display: flex;
@@ -65,12 +76,6 @@ $circle-shadow: #00000047;
   font-weight: 700;
   line-height: 92px;
   top: 775px;
-}
-
-@mixin graphic_design($color, $index, $left) {
-  color: $color;
-  z-index: $index;
-  left: $left;
 }
 
 %text {
@@ -133,7 +138,13 @@ $circle-shadow: #00000047;
   margin: 0 auto;
 }
 
-@mixin button($width, $height, $radius, $bg) {
+@mixin graphic_design($color, $index, $left) {
+  color: $color;
+  z-index: $index;
+  left: $left;
+}
+
+@mixin area($width, $height, $radius, $bg) {
   width: $width;
   height: $height;
   border-radius: $radius;
@@ -154,6 +165,10 @@ $circle-shadow: #00000047;
   color: $color;
 }
 
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
 
 body {
   font-family: "Roboto";
@@ -164,7 +179,7 @@ body {
 .header {
   display: flex;
   &__left-button {
-    @include button(160px, 56px, 27px, $red-color);
+    @include area(160px, 56px, 27px, $red-color);
     margin: 25px 235px 0 82px;
   }
   &__nav {
@@ -184,7 +199,7 @@ body {
     font-size: 19px;
     font-weight: 900;
     margin: 26px 60px 0 206px;
-    @include button(172px, 56px, 27px, $red-color);
+    @include area(172px, 56px, 27px, $red-color);
     &__text {
       color: $white-color;
     }
@@ -428,52 +443,254 @@ body {
       }
     }
   }
-  &__button{
+  &__button {
     width: 184.38px;
-height: 63.22px;
-border-radius: 27px;
-background-color: $red-color;
-color: $white-color;
-align-self: center;
+    height: 63.22px;
+    border-radius: 27px;
+    background-color: $red-color;
+    color: $white-color;
+    align-self: center;
   }
 }
 
-.reviews{
-@extend %position;
-width: 1437px;
-height: 1756px;
-background: url("../img/reviews_background.png");
-&__title{
- color: $pink-color;
- @extend %reviews;
- left: 72px;
- z-index: 1;
-}
-&__title-shadow{
-  color: $reviews-shadow;
-  @extend %reviews;
-  left: 76px;
- }
- &__anna-img{
-  @include img(absolute, 63px, 179px, 3);
- }
- &__daria-img{
-  @include img(absolute, 57px, 982px, 3);
- }
- &__mark-img{
-  @include img(absolute, 335px, 556px, 3);
- }
- &__circle{
-  @include img(absolute, 190px, 155px, 1);
-  @include button(310px, 302px, 50%, $reviews-circle);
-  box-shadow: 0px 0px 13px 20px $circle-shadow;
- }
- &__circle-small{
-  @include img(absolute, 25px, 20px, 2);
-  @include button(272px, 257px, 50%, white);
-  background: linear-gradient(180deg, #BE0606 25.84%, #C99898 50.93%, #040101 111.36%);
-  box-shadow: 0px 0px 13px 20px $circle-shadow;
- }
-}
+.reviews {
+  @extend %position;
+  width: 1437px;
+  height: 1756px;
+  background: url("../img/reviews_background.png");
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: $pink-color;
+    @extend %reviews;
+    left: 72px;
+    z-index: 1;
+  }
+  &__title-shadow {
+    color: $reviews-shadow;
+    @extend %reviews;
+    left: 76px;
+  }
+  &__anna-img {
+    @include img(absolute, 63px, 179px, 3);
+  }
+  &__daria-img {
+    @include img(absolute, 57px, 982px, 3);
+  }
+  &__mark-img {
+    @include img(absolute, 335px, 556px, 3);
+  }
+  &__circle {
+    @include img(absolute, 190px, 155px, 1);
+    @include area(310px, 302px, 50%, $reviews-circle);
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__circle-small {
+    @include img(absolute, 25px, 20px, 2);
+    @include area(272px, 257px, 50%, none);
+    background: linear-gradient(
+      180deg,
+      #be0606 25.84%,
+      #c99898 50.93%,
+      #040101 111.36%
+    );
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__circle-daria {
+    @include img(absolute, 190px, 962px, 1);
+    @include area(310px, 302px, 50%, $reviews-circle);
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__circle-small-daria {
+    @include img(absolute, 25px, 20px, 2);
+    @include area(264px, 257px, 50%, none);
+    background: linear-gradient(
+      180deg,
+      #be0606 25.84%,
+      #c99898 50.93%,
+      #040101 111.36%
+    );
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__circle-mark {
+    @include img(absolute, 545px, 531.5px, 1);
+    @include area(341px, 322px, 50%, $reviews-circle);
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__circle-small-mark {
+    @include img(absolute, 20px, 25px, 2);
+    @include area(292px, 283px, 50%, none);
+    background: linear-gradient(
+      180deg,
+      #2b0303 20.96%,
+      #ff1b1b 57.21%,
+      #421f1f 79.99%
+    );
+    box-shadow: 0px 0px 13px 20px $circle-shadow;
+  }
+  &__elipse {
+    @include img(absolute, 361px, 272px, 4);
+    @include area(309px, 144px, 49%, $elipse-anna);
+    border: 6px solid rgba(54, 27, 27, 0.2);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 49%;
+      border: 3px solid rgba(101, 24, 24, 0.62);
+      z-index: 5;
+      box-shadow: 0 0 4px 0 $light-shadow;
+    }
+    &__title {
+      color: $black-color;
+      z-index: 6;
+      margin-top: 22px;
+      height: 21.4px;
+      border: 1px;
+      -webkit-text-stroke: 1px $name-border;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21.09px;
+    }
+    &__line {
+      @include size(205.28px, 2px);
+      background-color: $black-color;
+      margin: 4px 0 7px;
+    }
 
+    &__text {
+      @include size(170px, 56.8px);
+      line-height: 18.75px;
+      color: $black-color;
+    }
+  }
+  &__elipse-back {
+    @include img(absolute, 365px, 272px, 3);
+    @include area(309px, 144px, 49%, $elipse-anna-back);
+    rotate: 8.21deg;
+    box-shadow: 0 0 4px 0 $light-shadow;
+  }
+  &__elipse-daria {
+    @include img(absolute, 362px, 800px, 4);
+    @include area(310px, 147px, 49%, $review-daria);
+    border: 4px solid $elipse-daria;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      color: $black-color;
+      z-index: 6;
+      margin-top: 22px;
+      height: 21.4px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21.09px;
+    }
+    &__line {
+      @include size(205.28px, 2px);
+      background-color: $black-color;
+      margin: 4px 0 7px;
+    }
 
+    &__text {
+      @include size(202px, 56.8px);
+      line-height: 18.75px;
+      color: $black-color;
+    }
+  }
+  &__elipse-daria-back {
+    @include img(absolute, 365px, 795px, 3);
+    @include area(309px, 144px, 49%, $shadow-daria);
+    rotate: 8.21deg;
+    box-shadow: 0 0 4px 0 $light-shadow;
+  }
+  &__elipse-mark {
+    @include img(absolute, 804px, 555px, 4);
+    @include area(310px, 147px, 49%, $review-mark);
+    border: 3px solid $elipse-mark;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      color: $white-color;
+      z-index: 6;
+      margin-top: 22px;
+      height: 21.4px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21.09px;
+    }
+    &__line {
+      @include size(205.28px, 2px);
+      background-color: $white-color;
+      margin: 4px 0 7px;
+    }
+
+    &__text {
+      @include size(202px, 56.8px);
+      line-height: 18.75px;
+      color: $white-color;
+      width: 155.21px;
+    }
+  }
+  &__elipse-mark-back {
+    @include img(absolute, 795px, 545px, 3);
+    @include area(330px, 169px, 49%, $shadow-mark);
+    rotate: 8.48deg;
+    box-shadow: 0 0 4px 0 $light-shadow;
+  }
+  &__lets-work {
+    @include size(1112px, 434px);
+    margin: 1204px auto 0px;
+    // border: 6px solid #230303E5;
+    // box-shadow: 0px 0px 12px 17px #86161657;
+    border-radius: 12px;
+    background: url("../img/lets-work-bg.png") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__red {
+      @include size(981px, 371px);
+      background: url("../img/lets-work-bg-red.png") no-repeat center/cover;
+      border-radius: 19px;
+      display: flex;
+      &__left {
+        width: 582px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        &__title {
+          font-family: "Syncopate";
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 41.64px;
+          margin-top: 69px;
+          color: $lets-work;
+        }
+        &__line {
+          @include size(559px, 4px);
+          background-color: $black-color;
+          margin-top: -2px;
+        }
+
+        &__text {
+          @include size(508px, 24px);
+          font-size: 15px;
+          line-height: 17.58px;
+          letter-spacing: 0.06em;
+          color: $lets-work-text;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
