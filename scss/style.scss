@@ -1,4 +1,4 @@
-@import "../styles/reset";
+@import "reset";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&family=Syncopate:wght@400;700&display=swap");
 @font-face {
   font-family: "Awesome-Font";
@@ -786,7 +786,7 @@ body {
       color: $footer-text;
     }
   }
-  &__email{
+  &__email {
     margin-right: 171px;
     margin-top: 110px;
     @include size(251px, 16px);
@@ -796,7 +796,7 @@ body {
     letter-spacing: 0.06em;
     color: $footer-text;
   }
-  &__tel{
+  &__tel {
     @include size(149px, 16px);
     margin-top: 110px;
     font-size: 15px;
