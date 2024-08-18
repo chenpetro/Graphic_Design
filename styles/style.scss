@@ -213,7 +213,7 @@ body {
 .graphic-design {
   width: 1437px;
   height: 1090px;
-  background: url("/img/grey_background.png") no-repeat center/cover;
+  background: url("../img/grey_background.png") no-repeat center/cover;
   @extend %position;
   &__girl {
     @include img(absolute, 85px, 379px, 4);
