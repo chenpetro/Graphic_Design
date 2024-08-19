@@ -1,0 +1,102 @@
+@import "colors";
+%flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  %graphic_design {
+    font-family: "Syncopate";
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    position: absolute;
+    text-shadow: 0px 4px 4px 0px $light-shadow;
+  }
+  
+  %graphic {
+    width: 677.77px;
+    height: 87.19px;
+    rotate: 0.15deg;
+    font-size: 96px;
+    line-height: 96px;
+    top: 279px;
+  }
+
+  %graphic-small {
+    rotate: 0.15 deg;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    position: absolute;
+    top: 182px;
+  }
+
+
+  
+  %design {
+    width: 507px;
+    height: 92px;
+    font-size: 95px;
+    font-weight: 700;
+    line-height: 92px;
+    top: 775px;
+  }
+  
+  %text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26.5px;
+    letter-spacing: 0.05em;
+  }
+  
+  %mytask {
+    position: absolute;
+    height: 58.39px;
+    font-family: "Syncopate";
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 59.34px;
+  }
+  
+  %mytasktext {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+    position: absolute;
+  }
+  
+  %one {
+    position: absolute;
+    height: 241.48px;
+    font-size: 210px;
+    font-weight: 700;
+    line-height: 243.84px;
+    z-index: 2;
+  }
+  
+  %projects {
+    position: absolute;
+    width: 392.81px;
+    height: 58.28px;
+    top: 39px;
+    font-family: "Syncopate";
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 59.34px;
+  }
+  
+  %reviews {
+    position: absolute;
+    width: 359.5px;
+    height: 57.4px;
+    top: 26.26px;
+    font-family: "Syncopate";
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 59.34px;
+  }
+  
+  %position {
+    position: relative;
+    margin: 0 auto;
+  }

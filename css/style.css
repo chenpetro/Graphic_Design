@@ -53,12 +53,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Awesome-Font";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Awesome-Font"), local("Awesome-Font-Regular"), url(/fonts/Trebuchet-MS-Italic.ttf) format("woff");
-}
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -150,6 +144,12 @@ table {
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: "Trebuchet-Font";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Trebuchet-Font"), local("Trebuchet-Font-Regular"), url(/fonts/Trebuchet-MS-Italic.ttf) format("woff");
+}
 body {
   font-family: "Roboto";
   font-size: 16px;
@@ -180,6 +180,7 @@ body {
   font-size: 19px;
   font-weight: 900;
   margin: 26px 60px 0 206px;
+  border: none;
   width: 172px;
   height: 56px;
   border-radius: 27px;
@@ -907,4 +908,126 @@ body {
   line-height: 17.58px;
   letter-spacing: 0.06em;
   color: #d8d3d3;
+}
+
+@media (max-width: 368px) {
+  .graphic-design {
+    width: 368px;
+    height: 648px;
+  }
+  .graphic-design__girl {
+    width: 330px;
+    height: 419px;
+    position: absolute;
+    top: 102px;
+    left: 124px;
+    z-index: 4;
+  }
+  .graphic-design__elipse-big {
+    width: 402px;
+    height: 422px;
+    position: absolute;
+    top: 127px;
+    left: 88px;
+    z-index: 3;
+  }
+  .graphic-design__elipse-red {
+    width: 340px;
+    height: 357px;
+    position: absolute;
+    top: 163px;
+    left: 119px;
+    z-index: 3;
+  }
+  .graphic-design__title-one {
+    width: 681px;
+    height: 87px;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    top: 182px;
+    left: 38px;
+    z-index: 10;
+  }
+  .graphic-design__title-one-red {
+    width: 33px;
+    height: 87px;
+    width: 750px;
+    height: 87px;
+    rotate: 0.15 deg;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    top: 182px;
+    left: 42px;
+    z-index: 9;
+  }
+  .graphic-design__title-one-dark {
+    width: 33px;
+    height: 87px;
+    width: 750px;
+    height: 87px;
+    rotate: 0.15 deg;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    top: 182px;
+    left: 45px;
+    z-index: 8;
+  }
+  .graphic-design__title-two {
+    width: 161px;
+    height: 92px;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    top: 250px;
+    left: 38px;
+    z-index: 10;
+  }
+  .graphic-design__title-two-red {
+    width: 161px;
+    height: 92px;
+    width: 750px;
+    height: 87px;
+    rotate: 0.15 deg;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    position: absolute;
+    top: 250px;
+    left: 42px;
+    z-index: 9;
+  }
+  .graphic-design__title-two-dark {
+    width: 161px;
+    height: 92px;
+    width: 750px;
+    height: 87px;
+    rotate: 0.15 deg;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.005em;
+    position: absolute;
+    top: 250px;
+    left: 45px;
+    z-index: 8;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__left-button {
+    display: none;
+  }
+  .header__right-button {
+    width: 134px;
+    height: 43px;
+    position: absolute;
+    top: 303px;
+    left: -160px;
+    z-index: 5;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16.41px;
+  }
 }
