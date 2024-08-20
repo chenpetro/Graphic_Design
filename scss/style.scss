@@ -62,7 +62,9 @@ body {
   &__girl {
     @include img(absolute, 85px, 379px, 4);
   }
-
+  &__girl-hidden {
+display:none;
+  }
   &__title-one {
     @extend %graphic;
     @extend %graphic_design;
@@ -655,19 +657,44 @@ body {
   .graphic-design {
     @include size(368px, 648px);
     &__girl {
-      @include size(330px, 419px);
-      @include img(absolute, 102px, 124px, 4);
+      display: none;
     }
     &__elipse-big {
-      @include size(402px, 422px);
-      @include img(absolute, 127px, 88px, 3);
+display: none;
     }
+    &__girl-hidden {
+      display:block;
+      position: absolute;
+      top: 100px;
+      left: 88px;
+      z-index: 1;
+        }
     &__elipse-red {
-      @include size(340px, 357px);
-      @include img(absolute, 163px, 119px, 3);
+      display: none;
     }
+    &__text-top{
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0.01em;
+width: 119.61px;
+height: 27px;
+top: 559px;
+left: 207.34px;
+    }
+    &__text-bottom{
+      width: 140.71px;
+      height: 41px;
+      top: 508px;
+      left: 38.49px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 12px;
+      letter-spacing: 0.005em;
+      
+      
+          }
     &__title-one {
-      @include size(681px, 87px);
+      @include size(auto, 87px);
       font-size: 33px;
       line-height: 33px;
       letter-spacing: 0.005em;
@@ -677,7 +704,6 @@ body {
     }
     &__title-one-red {
       @include size(33px, 87px);
-      width: 750px;
       height: 87px;
       rotate: 0.15 deg;
       font-size: 33px;
@@ -689,7 +715,6 @@ body {
     }
     &__title-one-dark {
       @include size(33px, 87px);
-      width: 750px;
       height: 87px;
       rotate: 0.15 deg;
       font-size: 33px;
@@ -710,8 +735,6 @@ body {
     }
     &__title-two-red {
       @include size(161px, 92px);
-      width: 750px;
-      height: 87px;
       rotate: 0.15 deg;
       font-size: 33px;
       line-height: 33px;
@@ -723,7 +746,6 @@ body {
     }
     &__title-two-dark {
       @include size(161px, 92px);
-      width: 750px;
       height: 87px;
       rotate: 0.15 deg;
       font-size: 33px;
@@ -734,6 +756,11 @@ body {
       left: 45px;
       z-index: 8;
     }
+    &__elipse-small-red {
+      display: none;
+    }
+    &__elipse-small-brown {
+      display: none;
   }
   .header {
     &__nav {
@@ -838,10 +865,10 @@ body {
     font-size: 20px;
     font-weight: 900;
     line-height: 23.44px;
-    background-color: #D80808;
+    background-color: #d80808;
     border: none;
     color: #e5dede;
-margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -851,4 +878,5 @@ margin: 0 auto;
   font-size: 20px;
   font-weight: 400;
   line-height: 23.44px;
+}
 }
