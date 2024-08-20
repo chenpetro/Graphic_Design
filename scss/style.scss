@@ -63,7 +63,7 @@ body {
     @include img(absolute, 85px, 379px, 4);
   }
   &__girl-hidden {
-display:none;
+    display: none;
   }
   &__title-one {
     @extend %graphic;
@@ -653,132 +653,6 @@ display:none;
   }
 }
 
-@media (max-width: 368px) {
-  .graphic-design {
-    @include size(368px, 648px);
-    &__girl {
-      display: none;
-    }
-    &__elipse-big {
-display: none;
-    }
-    &__girl-hidden {
-      display:block;
-      position: absolute;
-      top: 100px;
-      left: 88px;
-      z-index: 1;
-        }
-    &__elipse-red {
-      display: none;
-    }
-    &__text-top{
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0.01em;
-width: 119.61px;
-height: 27px;
-top: 559px;
-left: 207.34px;
-    }
-    &__text-bottom{
-      width: 140.71px;
-      height: 41px;
-      top: 508px;
-      left: 38.49px;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 12px;
-      letter-spacing: 0.005em;
-      
-      
-          }
-    &__title-one {
-      @include size(auto, 87px);
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      top: 182px;
-      left: 38px;
-      z-index: 10;
-    }
-    &__title-one-red {
-      @include size(33px, 87px);
-      height: 87px;
-      rotate: 0.15 deg;
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      top: 182px;
-      left: 42px;
-      z-index: 9;
-    }
-    &__title-one-dark {
-      @include size(33px, 87px);
-      height: 87px;
-      rotate: 0.15 deg;
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      top: 182px;
-      left: 45px;
-      z-index: 8;
-    }
-    &__title-two {
-      @include size(161px, 92px);
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      top: 250px;
-      left: 38px;
-      z-index: 10;
-    }
-    &__title-two-red {
-      @include size(161px, 92px);
-      rotate: 0.15 deg;
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      position: absolute;
-      top: 250px;
-      left: 42px;
-      z-index: 9;
-    }
-    &__title-two-dark {
-      @include size(161px, 92px);
-      height: 87px;
-      rotate: 0.15 deg;
-      font-size: 33px;
-      line-height: 33px;
-      letter-spacing: 0.005em;
-      position: absolute;
-      top: 250px;
-      left: 45px;
-      z-index: 8;
-    }
-    &__elipse-small-red {
-      display: none;
-    }
-    &__elipse-small-brown {
-      display: none;
-  }
-  .header {
-    &__nav {
-      display: none;
-    }
-    &__left-button {
-      display: none;
-    }
-    &__right-button {
-      @include size(134px, 43px);
-      @include img(absolute, 303px, -160px, 5);
-      font-size: 14px;
-      font-weight: 900;
-      line-height: 16.41px;
-    }
-  }
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -879,4 +753,232 @@ left: 207.34px;
   font-weight: 400;
   line-height: 23.44px;
 }
+
+@media (max-width: 368px) {
+  .graphic-design {
+    @include size(368px, 648px);
+    &__girl {
+      display: none;
+    }
+    &__elipse-big {
+      display: none;
+    }
+    &__girl-hidden {
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 88px;
+      z-index: 1;
+    }
+    &__elipse-red {
+      display: none;
+    }
+    &__text-top {
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      width: 119.61px;
+      height: 27px;
+      top: 559px;
+      left: 207.34px;
+    }
+    &__text-bottom {
+      width: 140.71px;
+      height: 41px;
+      top: 508px;
+      left: 38.49px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 12px;
+      letter-spacing: 0.005em;
+    }
+    &__title-one {
+      @include size(auto, 87px);
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      top: 182px;
+      left: 38px;
+      z-index: 10;
+    }
+    &__title-one-red {
+      @include size(33px, 87px);
+      height: 87px;
+      rotate: 0.15 deg;
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      top: 182px;
+      left: 42px;
+      z-index: 9;
+    }
+    &__title-one-dark {
+      @include size(33px, 87px);
+      height: 87px;
+      rotate: 0.15 deg;
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      top: 182px;
+      left: 45px;
+      z-index: 8;
+    }
+    &__title-two {
+      @include size(161px, 92px);
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      top: 250px;
+      left: 38px;
+      z-index: 10;
+    }
+    &__title-two-red {
+      @include size(161px, 92px);
+      rotate: 0.15 deg;
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      position: absolute;
+      top: 250px;
+      left: 42px;
+      z-index: 9;
+    }
+    &__title-two-dark {
+      @include size(161px, 92px);
+      height: 87px;
+      rotate: 0.15 deg;
+      font-size: 33px;
+      line-height: 33px;
+      letter-spacing: 0.005em;
+      position: absolute;
+      top: 250px;
+      left: 45px;
+      z-index: 8;
+    }
+    &__elipse-small-red {
+      display: none;
+    }
+    &__elipse-small-brown {
+      display: none;
+    }
+    .header {
+      &__nav {
+        display: none;
+      }
+      &__left-button {
+        display: none;
+      }
+      &__right-button {
+        @include size(134px, 43px);
+        @include img(absolute, 303px, -160px, 5);
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 16.41px;
+      }
+    }
+  }
+  .my-task {
+    width: 368px;
+    height: 822px;
+    &__title {
+      width: 199px;
+      height: 31px;
+      top: 18px;
+      left: 81px;
+      font-size: 32px;
+      line-height: 33px;
+    }
+    &__shadow {
+      width: 199px;
+      height: 31px;
+      top: 18px;
+      left: 87px;
+      font-size: 32px;
+      line-height: 33px;
+    }
+    &__heart {
+      display: none;
+    }
+    &__cloud {
+      display: none;
+    }
+    &__laptop {
+      display: none;
+    }
+    &__img-one {
+      width: 320px;
+      height: 240px;
+      top: 35px;
+      left: 20px;
+    }
+    &__one {
+      font-size: 182px;
+      height: 190px;
+      width: 80px;
+      top: 60px;
+      left: 20px;
+    }
+    &__header-one {
+      font-size: 15px;
+      height: 32px;
+      width: 180px;
+      top: 125px;
+      left: 110px;
+    }
+    &__img-two {
+      width: 340px;
+      height: 220px;
+      top: 240px;
+      left: 20px;
+    }
+    &__two {
+      font-size: 182px;
+      height: 190px;
+      width: 80px;
+      top: 290px;
+      left: 40px;
+    }
+    &__header-two {
+      font-size: 15px;
+      height: 32px;
+      width: 180px;
+      top: 285px;
+      left: 130px;
+    }
+    &__text-two {
+      font-size: 10px;
+      height: 50px;
+      width: 110px;
+      top: 310px;
+      left: 130px;
+    }
+    &__img-three {
+      width: 340px;
+      height: 235px;
+      top: 450px;
+      left: 20px;
+    }
+    &__three {
+      font-size: 182px;
+      height: 190px;
+      width: 80px;
+      top: 535px;
+      left: 20px;
+    }
+    &__header-three {
+      font-size: 12px;
+      height: 32px;
+      width: 200px;
+      top: 605px;
+      left: 130px;
+    }
+    &__text-three {
+      font-size: 8px;
+      height: 50px;
+      width: 130px;
+      top: 540px;
+      left: 187px;
+      line-height: 9px;
+    }
+  }
 }

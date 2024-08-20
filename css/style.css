@@ -913,6 +913,113 @@ body {
   color: #d8d3d3;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 29, 29, 0.8509803922);
+  opacity: 50%;
+  z-index: 15;
+  opacity: 1;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1085px;
+  height: 723px;
+  background-color: rgba(194, 0, 0, 0.5215686275);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
+.modal__box {
+  width: 1046px;
+  height: 681px;
+  background-color: rgba(49, 0, 0, 0.3803921569);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__box__line {
+  width: 945px;
+  height: 83px;
+  border-radius: 15px;
+  background-color: rgba(194, 0, 0, 0.5215686275);
+  border: 4px solid rgba(238, 5, 5, 0.2509803922);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 34px;
+}
+.modal__box__title {
+  width: 630px;
+  height: 64px;
+  top: 221px;
+  margin-left: 53px;
+  margin-top: 36px;
+  margin-bottom: 111px;
+  font-family: "Syncopate";
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 36.44px;
+  color: #e5dede;
+}
+.modal__box__input {
+  width: 934px;
+  height: 64px;
+  border-radius: 15px;
+  background-color: #450101;
+  border: 4px solid rgba(238, 5, 5, 0.1294117647);
+  border-radius: 15px;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  color: red;
+}
+.modal-send {
+  width: 172px;
+  height: 56px;
+  border-radius: 27px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 23.44px;
+  background-color: #d80808;
+  border: none;
+  color: #e5dede;
+  margin: 0 auto;
+}
+
+::-moz-placeholder {
+  color: red;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+}
+
+::placeholder {
+  color: red;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+}
+
 @media (max-width: 368px) {
   .graphic-design {
     width: 368px;
@@ -1045,106 +1152,108 @@ body {
     font-weight: 900;
     line-height: 16.41px;
   }
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 29, 29, 0.8509803922);
-    opacity: 50%;
-    z-index: 15;
-    opacity: 1;
+  .my-task {
+    width: 368px;
+    height: 822px;
   }
-  .backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
+  .my-task__title {
+    width: 199px;
+    height: 31px;
+    top: 18px;
+    left: 81px;
+    font-size: 32px;
+    line-height: 33px;
   }
-  .no-scroll {
-    overflow: hidden;
+  .my-task__shadow {
+    width: 199px;
+    height: 31px;
+    top: 18px;
+    left: 87px;
+    font-size: 32px;
+    line-height: 33px;
   }
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1085px;
-    height: 723px;
-    background-color: rgba(194, 0, 0, 0.5215686275);
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 24px;
+  .my-task__heart {
+    display: none;
   }
-  .modal__box {
-    width: 1046px;
-    height: 681px;
-    background-color: rgba(49, 0, 0, 0.3803921569);
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
+  .my-task__cloud {
+    display: none;
   }
-  .modal__box__line {
-    width: 945px;
-    height: 83px;
-    border-radius: 15px;
-    background-color: rgba(194, 0, 0, 0.5215686275);
-    border: 4px solid rgba(238, 5, 5, 0.2509803922);
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 34px;
+  .my-task__laptop {
+    display: none;
   }
-  .modal__box__title {
-    width: 630px;
-    height: 64px;
-    top: 221px;
-    margin-left: 53px;
-    margin-top: 36px;
-    margin-bottom: 111px;
-    font-family: "Syncopate";
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 36.44px;
-    color: #e5dede;
+  .my-task__img-one {
+    width: 320px;
+    height: 240px;
+    top: 35px;
+    left: 20px;
   }
-  .modal__box__input {
-    width: 934px;
-    height: 64px;
-    border-radius: 15px;
-    background-color: #450101;
-    border: 4px solid rgba(238, 5, 5, 0.1294117647);
-    border-radius: 15px;
-    opacity: 1;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
-    color: red;
+  .my-task__one {
+    font-size: 182px;
+    height: 190px;
+    width: 80px;
+    top: 60px;
+    left: 20px;
   }
-  .modal-send {
-    width: 172px;
-    height: 56px;
-    border-radius: 27px;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 23.44px;
-    background-color: #d80808;
-    border: none;
-    color: #e5dede;
-    margin: 0 auto;
+  .my-task__header-one {
+    font-size: 15px;
+    height: 32px;
+    width: 180px;
+    top: 125px;
+    left: 110px;
   }
-  ::-moz-placeholder {
-    color: red;
-    opacity: 1;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
+  .my-task__img-two {
+    width: 340px;
+    height: 220px;
+    top: 240px;
+    left: 20px;
   }
-  ::placeholder {
-    color: red;
-    opacity: 1;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
+  .my-task__two {
+    font-size: 182px;
+    height: 190px;
+    width: 80px;
+    top: 290px;
+    left: 40px;
+  }
+  .my-task__header-two {
+    font-size: 15px;
+    height: 32px;
+    width: 180px;
+    top: 285px;
+    left: 130px;
+  }
+  .my-task__text-two {
+    font-size: 10px;
+    height: 50px;
+    width: 110px;
+    top: 310px;
+    left: 130px;
+  }
+  .my-task__img-three {
+    width: 340px;
+    height: 235px;
+    top: 450px;
+    left: 20px;
+  }
+  .my-task__three {
+    font-size: 182px;
+    height: 190px;
+    width: 80px;
+    top: 535px;
+    left: 20px;
+  }
+  .my-task__header-three {
+    font-size: 12px;
+    height: 32px;
+    width: 200px;
+    top: 605px;
+    left: 130px;
+  }
+  .my-task__text-three {
+    font-size: 8px;
+    height: 50px;
+    width: 130px;
+    top: 540px;
+    left: 187px;
+    line-height: 9px;
   }
 }
