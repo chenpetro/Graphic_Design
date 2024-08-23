@@ -1123,18 +1123,45 @@ body {
     &__elipse-mark-back {
       display: none;
     }
-    &__lets-work{
-      display: none;
-      &__red-left{
-        display: flex;
+    &__lets-work {
+      width: 368px;
+      height: 703px;
+      &__red {
+        border-radius: 0;
+        width: 368px;
+        height: 703px;
+        &__left {
+          &__title {
+            width: 330px;
+            height: 220.7px;
+          }
+          &__line {
+            width: 259px;
+          }
+          &__text {
+            width: 259px;
+            height: 39.95px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+            letter-spacing: 0.04em;
+            margin-bottom: 170px;
+          }
+        }
+        &__button{
+          position: absolute;
+          top:1560px;
+          left: -20px;
+          width: 194px;
+height: 54px;
+
+
+        }
       }
     }
   }
 
-
-
-
-  .footer{
+  .footer {
     display: none;
   }
 }

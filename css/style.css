@@ -1380,10 +1380,36 @@ body {
     display: none;
   }
   .reviews__lets-work {
-    display: none;
+    width: 368px;
+    height: 703px;
   }
-  .reviews__lets-work__red-left {
-    display: flex;
+  .reviews__lets-work__red {
+    border-radius: 0;
+    width: 368px;
+    height: 703px;
+  }
+  .reviews__lets-work__red__left__title {
+    width: 330px;
+    height: 220.7px;
+  }
+  .reviews__lets-work__red__left__line {
+    width: 259px;
+  }
+  .reviews__lets-work__red__left__text {
+    width: 259px;
+    height: 39.95px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.04em;
+    margin-bottom: 170px;
+  }
+  .reviews__lets-work__red__button {
+    position: absolute;
+    top: 1560px;
+    left: -20px;
+    width: 194px;
+    height: 54px;
   }
   .footer {
     display: none;
