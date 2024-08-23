@@ -1005,6 +1005,23 @@ body {
   line-height: 23.44px;
 }
 
+.burger {
+  display: none;
+}
+
+.menu-hidden {
+  width: 295px;
+  height: 468px;
+  position: absolute;
+  top: 88px;
+  left: 36px;
+  border-radius: 31px;
+  background-color: rgba(175, 3, 3, 0.8901960784);
+  display: none;
+  z-index: 12;
+  flex-direction: column;
+}
+
 @media (max-width: 368px) {
   .graphic-design {
     width: 368px;
@@ -1414,33 +1431,10 @@ body {
   .footer {
     display: none;
   }
-}
-.burger {
-  display: none;
-}
-
-.burger__line {
-  height: 30px;
-  width: 20px;
-  background: wheat;
-}
-
-@media (max-width: 368px) {
   .burger {
     display: flex;
     position: absolute;
     top: 39px;
     left: 38px;
-  }
-  .nav__ul {
-    display: none;
-  }
-  .nav__ul-hidden {
-    flex-direction: column;
-    row-gap: 20px;
-    transform: translateY(0);
-    position: absolute;
-    top: 10%;
-    left: 10%;
   }
 }
