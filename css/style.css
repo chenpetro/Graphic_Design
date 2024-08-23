@@ -401,9 +401,6 @@ body {
   background: url("../img/black_backgroung.png");
   z-index: -2;
 }
-.projects__mobile1 {
-  display: none;
-}
 .projects__title {
   left: 78px;
   color: #e4cfcf;
@@ -1310,7 +1307,7 @@ body {
   }
   .reviews {
     width: 368px;
-    height: 1166px;
+    height: 1870px;
   }
   .reviews__title {
     top: 35px;
@@ -1380,6 +1377,15 @@ body {
     display: none;
   }
   .reviews__elipse-mark-back {
+    display: none;
+  }
+  .reviews__lets-work {
+    display: none;
+  }
+  .reviews__lets-work__red-left {
+    display: flex;
+  }
+  .footer {
     display: none;
   }
 }

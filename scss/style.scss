@@ -210,9 +210,6 @@ body {
   background: url("../img/black_backgroung.png");
   @extend %position;
   z-index: -2;
-  &__mobile1 {
-    display: none;
-  }
   &__title {
     @extend %projects;
     left: 78px;
@@ -1053,7 +1050,7 @@ body {
   }
   .reviews {
     width: 368px;
-    height: 1166px;
+    height: 1870px;
     &__title {
       top: 35px;
       left: 95px;
@@ -1126,5 +1123,18 @@ body {
     &__elipse-mark-back {
       display: none;
     }
+    &__lets-work{
+      display: none;
+      &__red-left{
+        display: flex;
+      }
+    }
+  }
+
+
+
+
+  .footer{
+    display: none;
   }
 }
