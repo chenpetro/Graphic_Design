@@ -759,17 +759,82 @@ body {
 .burger {
   display: none;
 }
-.menu-hidden{
+.menu-hidden {
   width: 295px;
   height: 468px;
   position: absolute;
   top: 88px;
   left: 36px;
-  border-radius: 31px; 
-  background-color: #AF0303E3;
+  border-radius: 31px;
+  background-color: #af0303e3;
   display: none;
   z-index: 12;
   flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  &__title {
+    font-family: "Syncopate";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.035em;
+    margin-top: 37px;
+    margin-bottom: 18px;
+    color: #ededed;
+  }
+  &__bdiv {
+    width: 216px;
+    height: 58px;
+    border-radius: 13px;
+    background-color: #900202e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__button {
+      width: 196px;
+      height: 40px;
+      background-color: #3a0000e3;
+      border: none;
+      border-radius: 13px;
+      color: #ededed;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.005em;
+    }
+  }
+  &__bdivred {
+    width: 196px;
+    height: 40px;
+    border-radius: 13px;
+    background-color: #e70b0be5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__button {
+      width: 151px;
+      height: 31px;
+      background-color: #94050587;
+      border: 2px solid #82050526;
+      border-radius: 13px;
+      color: $black-color;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.005em;
+    }
+  }
+  &__close {
+    margin-bottom: 11px;
+    width: 99px;
+    height: 32px;
+    color: $black-color;
+    background-color: #d80808;
+    border: none;
+    border-radius: 27px;
+    font-family: "Syncopate";
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
 }
 @media (max-width: 368px) {
   .graphic-design {
@@ -1163,14 +1228,12 @@ body {
             margin-bottom: 170px;
           }
         }
-        &__button{
+        &__button {
           position: absolute;
-          top:1560px;
+          top: 1560px;
           left: -20px;
           width: 194px;
-height: 54px;
-
-
+          height: 54px;
         }
       }
     }
@@ -1179,23 +1242,10 @@ height: 54px;
   .footer {
     display: none;
   }
-  .burger{
+  .burger {
     display: flex;
     position: absolute;
     top: 39px;
     left: 38px;
+  }
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-

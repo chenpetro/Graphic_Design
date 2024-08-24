@@ -8,7 +8,7 @@ burger.addEventListener("click", function () {
   i++;
   console.log(i);
   if (i % 2 == 0) {
-    menu.style.display = "block";
+    menu.style.display = "flex";
   } else {
     menu.style.display = "none";
   }
