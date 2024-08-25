@@ -13,30 +13,33 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-
     <section class="graphic-design">
-      
       <header class="header">
         <nav class="nav">
-          <img class="burger" src="./img/burger_icon.svg" alt="">
-          <div class="backdrop-menu"></div>
-          <div class="menu-hidden" id="menu-hidden">
-            <h4 class="menu-hidden__title">Menu</h4>
-            <div class="menu-hidden__bdiv"> <button class="menu-hidden__bdiv__button" >About Me</button></div>
-            <div class="menu-hidden__bdivred"> <button class="menu-hidden__bdivred__button" >My Task</button></div>
-            <div class="menu-hidden__bdiv"> <button class="menu-hidden__bdiv__button" >Projects</button></div>
-            <div class="menu-hidden__bdivred"> <button class="menu-hidden__bdivred__button" >Reviews</button></div>
-            <div class="menu-hidden__bdiv"> <button class="menu-hidden__bdiv__button" >Contacts</button></div>
-            
-            <button class="menu-hidden__close">Close</button>
+          <img class="burger" src="./img/burger_icon.svg" alt="" />
+          <div class="backdrop-menu" id="backdrop-menu">
+            <div class="menu-hidden" id="menu-hidden">
+              <h4 class="menu-hidden__title">Menu</h4>
+              <div class="menu-hidden__bdiv">
+                <button class="menu-hidden__bdiv__button">About Me</button>
+              </div>
+              <div class="menu-hidden__bdivred">
+                <button class="menu-hidden__bdivred__button">My Task</button>
+              </div>
+              <div class="menu-hidden__bdiv">
+                <button class="menu-hidden__bdiv__button">Projects</button>
+              </div>
+              <div class="menu-hidden__bdivred">
+                <button class="menu-hidden__bdivred__button">Reviews</button>
+              </div>
+              <div class="menu-hidden__bdiv">
+                <button class="menu-hidden__bdiv__button">Contacts</button>
+              </div>
 
-
-
-          
+              <button class="menu-hidden__close">Close</button>
+            </div>
+          </div>
         </nav>
-
-      </div>
-
 
         <button type="button" class="header__left-button"></button>
         <ul class="header__nav">
@@ -96,10 +99,14 @@
             </form>
           </div>
         </div> -->
-
+        <button class="cls">Close</button>
       </header>
       <img class="graphic-design__girl" src="./img/girl.png" alt="" />
-      <img class="graphic-design__girl-hidden" src="./img/girl_mobile_cropped.png" alt="" />
+      <img
+        class="graphic-design__girl-hidden"
+        src="./img/girl_mobile_cropped.png"
+        alt=""
+      />
 
       <h1 class="graphic-design__title-one">GRAPHIC</h1>
       <h1 class="graphic-design__title-one-red">GRAPHIC</h1>
@@ -174,7 +181,9 @@
               alt=""
             />
           </div>
-          <h6 class="projects__list__item__title projects__list__item__title1">Business Cards</h6>
+          <h6 class="projects__list__item__title projects__list__item__title1">
+            Business Cards
+          </h6>
           <p class="projects__list__item__text">Behance</p>
         </li>
         <li class="projects__list__item">
@@ -261,100 +270,88 @@
       <div class="reviews__elipse-mark-back"></div>
 
       <div class="reviews__lets-work">
-          <div class="reviews__lets-work__red">
-            <div class="reviews__lets-work__red__left">
-              <h5 class="reviews__lets-work__red__left__title">
-                Let’s work together on your next Project
-              </h5>
-              <div class="reviews__lets-work__red__left__line"></div>
-              <p class="reviews__lets-work__red__left__text">
-                If you want to contact me for an order, click on the button and
-                contact me
-              </p>
-              <div class="reviews__lets-work__red__left__icons">
-                <img
-                  class="reviews__lets-work__red__left__icons__instagram"
-                  src="./img/instagram.png"
-                  alt=""
-                />
-                <img
-                  class="reviews__lets-work__red__left__icons__behance"
-                  src="./img/behance.png"
-                  alt=""
-                />
-                <img
-                  class="reviews__lets-work__red__left__icons__whatsapp"
-                  src="./img/whatssapp.png"
-                  alt=""
-                />
-              </div>
+        <div class="reviews__lets-work__red">
+          <div class="reviews__lets-work__red__left">
+            <h5 class="reviews__lets-work__red__left__title">
+              Let’s work together on your next Project
+            </h5>
+            <div class="reviews__lets-work__red__left__line"></div>
+            <p class="reviews__lets-work__red__left__text">
+              If you want to contact me for an order, click on the button and
+              contact me
+            </p>
+            <div class="reviews__lets-work__red__left__icons">
+              <img
+                class="reviews__lets-work__red__left__icons__instagram"
+                src="./img/instagram.png"
+                alt=""
+              />
+              <img
+                class="reviews__lets-work__red__left__icons__behance"
+                src="./img/behance.png"
+                alt=""
+              />
+              <img
+                class="reviews__lets-work__red__left__icons__whatsapp"
+                src="./img/whatssapp.png"
+                alt=""
+              />
             </div>
+          </div>
 
-            <!-- <button type="button" class="reviews__lets-work__red__button btn-open" data-modal-open>
+          <!-- <button type="button" class="reviews__lets-work__red__button btn-open" data-modal-open>
               Contact me
             </button> -->
 
+          <button
+            class="reviews__lets-work__red__button btn-open"
+            data-modal-open
+          >
+            Contact me
+          </button>
 
-            <button class="reviews__lets-work__red__button btn-open" data-modal-open>
-              Contact me
-            </button>
-            
-            <div class="backdrop is-hidden" data-modal>
-              <div class="modal">
-                <form class="modal__box">
-                  <label for="title" class="modal__box__title">
-                    Personal information :</label
-                  >
-                  <label for="name">
-                    <div class="modal__box__line">
-                      <input
-                        class="modal__box__input"
-                        type="text"
-                        placeholder="   Name"
-                      /></div
-                  ></label>
-                  <label for="surname">
-                    <div class="modal__box__line">
-                      <input
-                        class="modal__box__input"
-                        type="text"
-                        placeholder="   Surname"
-                      /></div
-                  ></label>
-                  
-                  <label for="email">
-                    <div class="modal__box__line">
-                      <input
-                        class="modal__box__input"
-                        type="email"
-                        placeholder="   E-mail"
-                      /></div
-                  ></label>
-                  <button type="submit" class="modal-send">Send</button>
-                </form>
-              </div>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <form class="modal__box">
+                <label for="title" class="modal__box__title">
+                  Personal information :</label
+                >
+                <label for="name">
+                  <div class="modal__box__line">
+                    <input
+                      class="modal__box__input"
+                      type="text"
+                      placeholder="   Name"
+                    /></div
+                ></label>
+                <label for="surname">
+                  <div class="modal__box__line">
+                    <input
+                      class="modal__box__input"
+                      type="text"
+                      placeholder="   Surname"
+                    /></div
+                ></label>
+
+                <label for="email">
+                  <div class="modal__box__line">
+                    <input
+                      class="modal__box__input"
+                      type="email"
+                      placeholder="   E-mail"
+                    /></div
+                ></label>
+                <button type="button" class="modal-send">Send</button>
+              </form>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
         </div>
       </div>
     </section>
+    <div class="thx"></div>
+      <h3 class="thank-you">thanks! <br> <br>
+        I will definitely contact you</h3>
+
     <footer class="footer">
       <h3 class="footer__name">CHEN NADIIA</h3>
       <div class="footer__line"></div>
@@ -366,7 +363,8 @@
       <p class="footer__email">E-mail: chennadiyka@gmail.com</p>
       <p class="footer__tel">+38(097)934-26-88</p>
     </footer>
-    <script src="/js/script.js"></script>
+    <!-- <script src="/js/script.js"></script> -->
     <script src="/js/burger.js"></script>
+    <script src="/js/modal.js"></script>
   </body>
 </html>
