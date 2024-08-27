@@ -4,8 +4,15 @@ const modalsend = document.querySelector(".modal-send");
 const thankyou = document.querySelector(".thank-you");
 const thx = document.querySelector(".thx");
 const cls = document.querySelector(".cls");
+const contactmeSecond = document.querySelector(".reviews__lets-work__red__button");
+
 
 contactme.addEventListener("click", function () {
+  backdr.style.display = "block";
+  document.body.classList.toggle("no-scroll");
+})
+
+contactmeSecond.addEventListener("click", function () {
   backdr.style.display = "block";
   document.body.classList.toggle("no-scroll");
 })

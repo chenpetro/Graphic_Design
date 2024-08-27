@@ -15,7 +15,6 @@
   <body>
     <section class="graphic-design">
       <header class="header">
-        <nav class="nav">
           <img class="burger" src="./img/burger_icon.svg" alt="" />
           <div class="backdrop-menu" id="backdrop-menu">
             <div class="menu-hidden" id="menu-hidden">
@@ -59,12 +58,13 @@
             <p class="header__nav__item__title">Contacts</p>
           </li>
         </ul>
-        <!-- <button type="button" class="header__right-button">Contact me</button> -->
 
-        <button class="header__right-button btn-open" data-modal-open>
+
+        <button class="header__right-button" data-modal-open>
           Contact me
         </button>
-        <!-- <div class="backdrop is-hidden" data-modal>
+        
+        <div class="backdrop" data-modal>
           <div class="modal">
             <form class="modal__box">
               <label for="title" class="modal__box__title">
@@ -86,7 +86,7 @@
                     placeholder="   Surname"
                   /></div
               ></label>
-              
+
               <label for="email">
                 <div class="modal__box__line">
                   <input
@@ -95,10 +95,14 @@
                     placeholder="   E-mail"
                   /></div
               ></label>
-              <button type="submit" class="modal-send">Send</button>
+              <button type="button" class="modal-send">Send</button>
             </form>
           </div>
-        </div> -->
+        </div>
+
+
+
+
         <button class="cls">Close</button>
       </header>
       <img class="graphic-design__girl" src="./img/girl.png" alt="" />
@@ -298,60 +302,20 @@
               />
             </div>
           </div>
-
-          <!-- <button type="button" class="reviews__lets-work__red__button btn-open" data-modal-open>
-              Contact me
-            </button> -->
-
-          <button
-            class="reviews__lets-work__red__button btn-open"
+          
+          <button id="modalsecond"
+            class="reviews__lets-work__red__button"
             data-modal-open
           >
             Contact me
           </button>
-
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <form class="modal__box">
-                <label for="title" class="modal__box__title">
-                  Personal information :</label
-                >
-                <label for="name">
-                  <div class="modal__box__line">
-                    <input
-                      class="modal__box__input"
-                      type="text"
-                      placeholder="   Name"
-                    /></div
-                ></label>
-                <label for="surname">
-                  <div class="modal__box__line">
-                    <input
-                      class="modal__box__input"
-                      type="text"
-                      placeholder="   Surname"
-                    /></div
-                ></label>
-
-                <label for="email">
-                  <div class="modal__box__line">
-                    <input
-                      class="modal__box__input"
-                      type="email"
-                      placeholder="   E-mail"
-                    /></div
-                ></label>
-                <button type="button" class="modal-send">Send</button>
-              </form>
-            </div>
-          </div>
+      
         </div>
       </div>
     </section>
     <div class="thx"></div>
       <h3 class="thank-you">thanks! <br> <br>
         I will definitely contact you</h3>
-
     <footer class="footer">
       <h3 class="footer__name">CHEN NADIIA</h3>
       <div class="footer__line"></div>
@@ -363,7 +327,6 @@
       <p class="footer__email">E-mail: chennadiyka@gmail.com</p>
       <p class="footer__tel">+38(097)934-26-88</p>
     </footer>
-    <!-- <script src="/js/script.js"></script> -->
     <script src="/js/burger.js"></script>
     <script src="/js/modal.js"></script>
   </body>

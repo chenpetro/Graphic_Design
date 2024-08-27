@@ -13,14 +13,11 @@
     url(/fonts/Trebuchet-MS-Italic.ttf) format("woff");
 }
 
-// p {
-// font-family: 'Trebuchet-Font', Arial;
-// }
-
 body {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
+  transition: all 0.5s;
 }
 
 .header {
@@ -616,7 +613,7 @@ body {
       letter-spacing: 0.06em;
       color: $contact-me;
     }
-    &__main-page {  
+    &__main-page {
       //     document.body.classList.toggle("no-scroll");
       margin-bottom: 10px;
       @include size(85px, 16px);
@@ -664,14 +661,8 @@ body {
   height: 100%;
   background-color: #211d1dd9;
   z-index: 15;
-
- display: none;
-  // &.is-hidden {
-  //   opacity: 0;
-  //   pointer-events: none;
-  // }
+  display: none;
 }
-
 
 .backdrop-menu {
   position: fixed;
@@ -684,10 +675,6 @@ body {
   overflow: none;
   display: none;
 }
-
-
-
-
 
 .no-scroll {
   overflow: hidden;
@@ -765,9 +752,9 @@ body {
   }
 }
 
-.cls{
+.cls {
   position: absolute;
-  top: 79%;
+  top: 517px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 194px;
@@ -872,7 +859,7 @@ body {
     letter-spacing: 0.05em;
   }
 }
-.thx{
+.thx {
   position: fixed;
   top: 0;
   left: 0;
@@ -881,26 +868,25 @@ body {
   background-color: #211d1dd9;
   z-index: 16;
 
- display: none;
+  display: none;
 }
-.thank-you{
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-color: #fff;
-font-weight: 700;
-font-size: 30px;
-line-height: 120%;
-letter-spacing: 0.04em;
-z-index: 16;
-width: 360px;
-height: 173px;
-font-family: "Syncopate";
-display: none;
+.thank-you {
+  position: fixed;
+  top: 206px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  z-index: 16;
+  width: 360px;
+  height: 173px;
+  font-family: "Syncopate";
+  display: none;
 }
-
 
 @media (max-width: 368px) {
   .graphic-design {
@@ -1341,8 +1327,6 @@ display: none;
         font-size: 34px;
         line-height: 35px;
         letter-spacing: -0.105em;
-
-        
       }
       &__input {
         width: 300px;
